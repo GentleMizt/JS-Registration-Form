@@ -29,3 +29,7 @@ table th, td{
 input{
     outline: none;
 }
+button{
+    padding: .5rem;
+    margin-right: .5rem;
+}
