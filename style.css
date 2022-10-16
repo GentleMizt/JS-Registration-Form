@@ -6,3 +6,12 @@
 html{
     font-size: 10px;
 }
+body{
+    background-image: url(./reg-imgs/reg-bgimg2.jpg);
+    background-size: cover;
+    object-fit: cover;
+}
+form{
+    border: 1px solid red;
+    width: 85vw;
+}
