@@ -7,11 +7,25 @@ html{
     font-size: 10px;
 }
 body{
-    background-image: url(./reg-imgs/reg-bgimg2.jpg);
-    background-size: cover;
+    background-image: url(/images2/APC13.jpg);
+    background-size:cover;
     object-fit: cover;
 }
 form{
-    border: 1px solid red;
-    width: 85vw;
+    width: 50vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+}
+table{
+    margin: auto;
+}
+table th, td{
+    padding: 1rem 1.5rem;
+}
+input{
+    outline: none;
 }
