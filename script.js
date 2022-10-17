@@ -7,6 +7,8 @@
     let tableData = document.querySelectorAll('td');
     let input = document.querySelectorAll('input');
     let inputObj = Object.values('input');
+    let button = document.querySelector('button');
+    let redirectText = document.querySelector('h2')
     
     // for (let i = 0; i < input.length; i++){
     //     input[i].addEventListener('change', formhandler)
@@ -28,7 +30,7 @@
     function callbackFunction(event) {
         event.preventDefault();
         const myFormData = new FormData(event.target);
-    
+      
         const formDataObj = {};
         myFormData.forEach((value, key) => {
             (formDataObj[key] = value)
@@ -36,7 +38,17 @@
             // console.log(key);
         });
         console.log(formDataObj);
+        redirect(formDataObj);
     };
+
+    function redirect(formDataObj){
+        console.log(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`)
+        alert(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`);  
+    }
+
+    button.addEventListener('click', redirect)
+   
+    
 
     // let User = function(firstname, lastname, age, email, password){
     //     this.firstname = firstname;
