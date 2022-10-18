@@ -9,6 +9,10 @@
     let inputObj = Object.values('input');
     let button = document.querySelector('button');
     let redirectText = document.querySelector('h2')
+    let password = document.getElementById('pass');
+    let confirmPassword = document.getElementById('pass2');
+    let submitBtn = document.getElementById('submit')
+
     
     // for (let i = 0; i < input.length; i++){
     //     input[i].addEventListener('change', formhandler)
@@ -33,13 +37,23 @@
         const formDataObj = {};
         myFormData.forEach((value, key) => {
             (formDataObj[key] = value);
-            // console.log(value);
             // console.log(key);
+            // console.log(value);
         });
         console.log(formDataObj);
         redirect(formDataObj);
     };
 
+    confirmPassword.addEventListener('keyup', passwordCheck)
+
+    function passwordCheck(event){
+        console.log(event.target);
+        setTimeout(() => {
+            if (password.value !== event.target.value){
+                sub
+            }
+        }, 3000)
+    }
     function redirect(formDataObj){
         // console.log(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`)
         alert(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`);  
@@ -59,7 +73,7 @@
 
     // const raddie = new User(`${}`)
 
-   
+
 
 
 
