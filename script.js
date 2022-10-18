@@ -28,12 +28,11 @@
     form.addEventListener('submit', callbackFunction);
 
     function callbackFunction(event) {
-        event.preventDefault();
+        // event.preventDefault();
         const myFormData = new FormData(event.target);
-      
         const formDataObj = {};
         myFormData.forEach((value, key) => {
-            (formDataObj[key] = value)
+            (formDataObj[key] = value);
             // console.log(value);
             // console.log(key);
         });
@@ -42,7 +41,7 @@
     };
 
     function redirect(formDataObj){
-        console.log(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`)
+        // console.log(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`)
         alert(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`);  
     }
 
@@ -58,7 +57,7 @@
     //     this.password = password;
     // }
 
-    // const raddie = new User('raddie')
+    // const raddie = new User(`${}`)
 
    
 
