@@ -47,12 +47,18 @@
     confirmPassword.addEventListener('keyup', passwordCheck)
 
     function passwordCheck(event){
-        console.log(event.target);
         setTimeout(() => {
             if (password.value !== event.target.value){
-                sub
+                //  disable the submit button
+                submitBtn.style.display = 'none'
             }
-        }, 3000)
+            // else if(confirmPassword.value === ''){
+            //     submitBtn.style.display = 'inline'
+            // }
+            else{
+                submitBtn.style.display = 'inline'
+            }
+        }, 2000);
     }
     function redirect(formDataObj){
         // console.log(`Welcome ${formDataObj.FirstName} ${formDataObj.LastName}`)
